@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "845532068784",
+    "project_id": "surveygrid-develop",
+    "storage_bucket": "surveygrid-develop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845532068784:android:bd5e5e03ff080b89513475",
+        "android_client_info": {
+          "package_name": "surveygrid.surveygrid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845532068784-vplk1faimet6qjhcqu4ptim3hrtj6ndj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1cdpFT5h2NfO56RuhPhgQyU_rMgXyXqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845532068784-vplk1faimet6qjhcqu4ptim3hrtj6ndj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
