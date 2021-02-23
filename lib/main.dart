@@ -13,7 +13,8 @@ Future<void> main() async {
 
 class SurveyGrid extends StatelessWidget {
   static FirebaseAnalytics analytics = FirebaseAnalytics();
-  static FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(analytics: analytics);
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
   static Firestore firestore = Firestore();
 
   // This widget is the root of your application.

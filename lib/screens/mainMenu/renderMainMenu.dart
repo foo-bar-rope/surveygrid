@@ -6,7 +6,7 @@ class RenderMainMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('Main Menu'),
+      child: Text('Main menu'),
     );
   }
 }
