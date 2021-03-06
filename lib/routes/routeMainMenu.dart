@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:surveygrid/layouts/layout.dart';
-import 'package:surveygrid/screens/mainMenu/renderMainMenu.dart';
+import 'package:surveygrid/screens/mainMenu/screenMainMenu.dart';
 
 class RouteMainMenu extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class RouteMainMenuRender extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RenderMainMenu()
+        child: ScreenMainMenu()
       ),
     );
   }
