@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:surveygrid/screens/sideMenu/renderSideMenu.dart';
+import 'package:surveygrid/screens/sideMenu/screenSideMenu.dart';
 
 class Layout extends StatelessWidget {
   Widget _body;
@@ -12,7 +12,7 @@ class Layout extends StatelessWidget {
         title: Text('Survey Grid'),
       ),
       drawer: Drawer(
-        child: RenderSideMenu(),
+        child: ScreenSideMenu(),
       ),
       body: _body,
     );

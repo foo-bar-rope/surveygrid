@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:surveygrid/components/buttons/surveyGridIconTextButton.dart';
 import 'package:surveygrid/components/text_form_fields/surveyGridTextFormField.dart';
 
-class RenderLogin extends StatefulWidget {
-  RenderLogin({Key key}) : super(key: key);
+class ScreenLogin extends StatefulWidget {
+  ScreenLogin({Key key}) : super(key: key);
 
   @override
   _renderLoginState createState() => _renderLoginState();
 }
 
-class _renderLoginState extends State<RenderLogin> {
+class _renderLoginState extends State<ScreenLogin> {
   String email;
   String password;
 
@@ -35,14 +35,14 @@ class _renderLoginState extends State<RenderLogin> {
         children: [
           SurveyGridTextFormField(
             enabled: true,
-            text: email,
+            value: email,
             decoration:
                 InputDecoration(labelText: 'Email', icon: Icon(Icons.email)),
             onChanged: onChangedEmail,
           ),
           SurveyGridTextFormField(
             enabled: true,
-            text: password,
+            value: password,
             decoration:
                 InputDecoration(labelText: 'Password', icon: Icon(Icons.lock)),
             onChanged: onChangedPassword,

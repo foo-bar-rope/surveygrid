@@ -4,7 +4,7 @@ import 'package:surveygrid/routes/routeLogin.dart';
 import 'package:surveygrid/routes/routeMainMenu.dart';
 import 'package:surveygrid/routes/routeTable.dart';
 
-class RenderSideMenu extends StatelessWidget {
+class ScreenSideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
