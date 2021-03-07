@@ -1,26 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:surveygrid/components/text_form_fields/surveyGridTextFormField.dart';
+import 'package:surveygrid/models/table/cells/modelSurveyGridTableCell.dart';
 
 class SurveyGridTableCell extends StatefulWidget {
-  final String value;
+  ModelSurveyGridTableCell cell;
+  final ValueChanged onChanged;
 
-  SurveyGridTableCell({this.value});
+  SurveyGridTableCell({this.cell, this.onChanged});
 
   @override
   _surveyGridCell createState() => _surveyGridCell();
 }
 
 class _surveyGridCell extends State<SurveyGridTableCell> {
-  ValueChanged<String> onChanged(String value) {
+  ValueChanged<String> onChanged(String changedValue) {
     setState(() {});
+    onChanged(changedValue);
   }
 
   Widget build(BuildContext context) {
-    return TableCell(
-        child: SurveyGridTextFormField(
-      value: widget.value,
+    return SurveyGridTextFormField(
+      value: widget.cell.value,
       onChanged: onChanged,
-    ));
+    );
   }
 }
