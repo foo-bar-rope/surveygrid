@@ -32,31 +32,90 @@ class ScreenTable extends StatelessWidget {
   final List<ModelSurveyGridTableRow> _surveyGridTableRows = [
     ModelSurveyGridTableRow(
         'hoge', 'tableId', Timestamp.now(), Timestamp.now(), [
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '100.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '200.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '300.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '100.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '100.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '100.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '100.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '100.000', Timestamp.now(), Timestamp.now()),
-      ModelSurveyGridTableCell('piyo', 'tableId', 'columnId', 'rowId',
-          '100.000', Timestamp.now(), Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '100.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '200.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '300.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '100.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '100.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '100.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '100.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '100.000',
+          Timestamp.now(),
+          Timestamp.now()),
+      ModelSurveyGridTableRowCell(
+          'piyo',
+          'tableId',
+          'columnId',
+          'rowId',
+          '100.000',
+          Timestamp.now(),
+          Timestamp.now()),
     ]),
   ];
 
   Widget build(BuildContext context) {
-    return DataTable(
-        columns: SurveyGridTableColumns(_surveyGridTableColumns),
-        rows: SurveyGridTableRows(_surveyGridTableRows, _columnIds),
+    return SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: DataTable(
+              columns: SurveyGridTableColumns(_surveyGridTableColumns),
+              rows: SurveyGridTableRows(_surveyGridTableRows, _columnIds),
+            ))
     );
   }
 }
