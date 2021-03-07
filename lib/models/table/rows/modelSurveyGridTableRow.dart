@@ -6,7 +6,7 @@ class ModelSurveyGridTableRow {
   final String tableId;
   final Timestamp createdAt;
   final Timestamp updatedAt;
-  final List<ModelSurveyGridTableCell> cells;
+  final List<ModelSurveyGridTableRowCell> cells;
 
   ModelSurveyGridTableRow(
       this.id, this.tableId, this.createdAt, this.updatedAt, this.cells);

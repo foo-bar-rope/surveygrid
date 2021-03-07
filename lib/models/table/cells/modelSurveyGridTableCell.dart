@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ModelSurveyGridTableCell {
+class ModelSurveyGridTableRowCell {
   final String id;
   final String tableId;
   final String columnId;
@@ -9,10 +9,10 @@ class ModelSurveyGridTableCell {
   final Timestamp createdAt;
   final Timestamp updatedAt;
 
-  ModelSurveyGridTableCell(this.id, this.tableId, this.columnId, this.rowId, this.value,
+  ModelSurveyGridTableRowCell(this.id, this.tableId, this.columnId, this.rowId, this.value,
       this.createdAt, this.updatedAt);
 
-  ModelSurveyGridTableCell.fromJson(Map<String, dynamic> json)
+  ModelSurveyGridTableRowCell.fromJson(Map<String, dynamic> json)
       : id = json['id'],
         tableId = json['tableId'],
         columnId = json['columnId'],

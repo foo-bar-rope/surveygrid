@@ -6,8 +6,9 @@ import 'package:surveygrid/models/table/columns/modelSurveyGridTableColumn.dart'
 class SurveyGridTableColumnCell extends StatefulWidget {
   ModelSurveyGridTableColumn column;
   final ValueChanged onChanged;
+  final double width;
 
-  SurveyGridTableColumnCell({this.column, this.onChanged});
+  SurveyGridTableColumnCell({this.column, this.onChanged, this.width});
 
   @override
   _surveyGridColumnCell createState() => _surveyGridColumnCell();
@@ -20,8 +21,10 @@ class _surveyGridColumnCell extends State<SurveyGridTableColumnCell> {
   }
 
   Widget build(BuildContext context) {
-    return SurveyGridText(
-      value: widget.column.name,
-    );
+    return Container(
+        width: widget.width,
+        child: SurveyGridText(
+          value: widget.column.name,
+        ));
   }
 }
