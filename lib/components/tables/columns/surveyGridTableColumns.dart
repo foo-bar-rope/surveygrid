@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:surveygrid/components/tables/cells/surveyGridTableColumnCell.dart';
+import 'package:surveygrid/components/tables/columns/surveyGridTableColumn.dart';
 import 'package:surveygrid/models/table/columns/modelSurveyGridTableColumn.dart';
 
-List<DataColumn> SurveyGridTableColumns(
-    List<ModelSurveyGridTableColumn> surveyGridColumns) {
-  return surveyGridColumns
-      .map((ModelSurveyGridTableColumn column) =>
-          DataColumn(label: SurveyGridTableColumnCell(column: column)))
-      .toList();
+List<TableRow> SurveyGridTableColumns(
+    List<ModelSurveyGridTableColumn> surveyGridDataTableColumns,
+    List<String> columnGroupIds,
+    List<String> columnIds) {
+
+  return surveyGridDataTableColumns.map((column) =>
+      SurveyGridTableColumn(
+          column, columnGroupIds, columnIds));
 }

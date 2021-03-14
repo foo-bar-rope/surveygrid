@@ -1,27 +1,25 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:surveygrid/components/text/surveyGridText.dart';
-import 'package:surveygrid/models/table/columns/modelSurveyGridTableColumn.dart';
+import 'package:surveygrid/models/table/cells/modelSurveyGridTableCell.dart';
 
 class SurveyGridTableColumnCell extends StatefulWidget {
-  ModelSurveyGridTableColumn column;
-  final ValueChanged onChanged;
+  final ModelSurveyGridTableCell surveyGridTableColumnCell;
+  final List<String> columnGroupIds;
+  final List<String> columnIds;
 
-  SurveyGridTableColumnCell({this.column, this.onChanged});
+  SurveyGridTableColumnCell(
+      this.surveyGridTableColumnCell, this.columnGroupIds, this.columnIds);
 
   @override
-  _surveyGridColumnCell createState() => _surveyGridColumnCell();
+  _surveyGridTableColumnCell createState() => _surveyGridTableColumnCell();
 }
 
-class _surveyGridColumnCell extends State<SurveyGridTableColumnCell> {
-  ValueChanged<String> onChanged(String changedValue) {
-    setState(() {});
-    onChanged(changedValue);
-  }
-
+class _surveyGridTableColumnCell extends State<SurveyGridTableColumnCell> {
   Widget build(BuildContext context) {
-    return SurveyGridText(
-      value: widget.column.name,
+    return Container(
+      alignment: Alignment.center,
+      padding: EdgeInsets.all(8),
+      child: SurveyGridText(value: widget.surveyGridTableColumnCell.value),
     );
   }
 }

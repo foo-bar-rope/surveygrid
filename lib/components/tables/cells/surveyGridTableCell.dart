@@ -4,25 +4,47 @@ import 'package:surveygrid/components/text_form_fields/surveyGridTextFormField.d
 import 'package:surveygrid/models/table/cells/modelSurveyGridTableCell.dart';
 
 class SurveyGridTableCell extends StatefulWidget {
-  ModelSurveyGridTableCell cell;
-  final ValueChanged onChanged;
+  final bool enabled;
+  final ModelSurveyGridTableCell surveyGridTableColumnCell;
+  final List<String> columnGroupIds;
+  final List<String> columnIds;
+  final List<String> rowGroupIds;
+  final List<String> rowIds;
+  final ValueChanged onChangedValue;
 
-  SurveyGridTableCell({this.cell, this.onChanged});
+  SurveyGridTableCell(
+      this.enabled,
+      this.surveyGridTableColumnCell,
+      this.columnGroupIds,
+      this.columnIds,
+      this.rowGroupIds,
+      this.rowIds,
+      this.onChangedValue);
 
   @override
-  _surveyGridCell createState() => _surveyGridCell();
+  _surveyGridTableCell createState() => _surveyGridTableCell();
 }
 
-class _surveyGridCell extends State<SurveyGridTableCell> {
-  ValueChanged<String> onChanged(String changedValue) {
-    setState(() {});
-    onChanged(changedValue);
+class _surveyGridTableCell extends State<SurveyGridTableCell> {
+  ValueChanged onChangedValue(String value) {
+    widget.onChangedValue(value);
   }
 
   Widget build(BuildContext context) {
-    return SurveyGridTextFormField(
-      value: widget.cell.value,
-      onChanged: onChanged,
+    return Container(
+      alignment: Alignment.center,
+      constraints: BoxConstraints(
+        minWidth: 80,
+      ),
+      padding: EdgeInsets.all(8),
+      child: SurveyGridTextFormField(
+        enabled: widget.enabled,
+        value: widget.surveyGridTableColumnCell.value,
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(),
+        onChanged: onChangedValue,
+        validationType: widget.surveyGridTableColumnCell.validationType,
+      ),
     );
   }
 }
