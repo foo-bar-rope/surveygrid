@@ -36,6 +36,7 @@ class _renderLoginState extends State<ScreenLogin> {
           SurveyGridTextFormField(
             enabled: true,
             value: email,
+            textAlign: TextAlign.start,
             decoration:
                 InputDecoration(labelText: 'Email', icon: Icon(Icons.email)),
             onChanged: onChangedEmail,
@@ -43,6 +44,7 @@ class _renderLoginState extends State<ScreenLogin> {
           SurveyGridTextFormField(
             enabled: true,
             value: password,
+            textAlign: TextAlign.start,
             decoration:
                 InputDecoration(labelText: 'Password', icon: Icon(Icons.lock)),
             onChanged: onChangedPassword,

@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:surveygrid/components/tables/cells/surveyGridTableRowCell.dart';
-import 'package:surveygrid/models/table/cells/modelSurveyGridTableCell.dart';
+import 'package:surveygrid/components/tables/cells/surveyGridTableCell.dart';
 import 'package:surveygrid/models/table/rows/modelSurveyGridTableRow.dart';
 
-int sortAscOrder(ModelSurveyGridTableRowCell A, ModelSurveyGridTableRowCell B,
-    List<String> columnIds) {
-  final indexA = columnIds.indexWhere((element) => element == A.columnId);
-  final indexB = columnIds.indexWhere((element) => element == B.columnId);
-  return indexA.compareTo(indexB);
-}
+TableRow SurveyGridTableRow(
+    ModelSurveyGridTableRow surveyGridDataTableRow,
+    List<String> columnGroupIds,
+    List<String> columnIds,
+    List<String> rowGroupIds,
+    List<String> rowIds) {
+  ValueChanged onChangedCell(value) {}
 
-DataRow SurveyGridTableRow(
-    ModelSurveyGridTableRow surveyGridRow, List<String> columnIds) {
-  surveyGridRow.cells.sort((a, b) => sortAscOrder(a, b, columnIds));
-
-  return DataRow(
-      cells: surveyGridRow.cells
-          .map((ModelSurveyGridTableRowCell cell) => DataCell(SurveyGridTableRowCell(
-                cell: cell,
-              )))
+  return TableRow(
+      children: surveyGridDataTableRow.cells
+          .map((cell) => SurveyGridTableCell(true, cell, columnGroupIds,
+              columnIds, rowGroupIds, rowIds, onChangedCell))
           .toList());
 }
