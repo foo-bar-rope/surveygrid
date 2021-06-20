@@ -1,51 +1,392 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:surveygrid/components/tables/column-groups/surveyGridTableColumnGroups.dart';
-import 'package:surveygrid/components/tables/row-groups/surveyGridTableRowGroups.dart';
-import 'package:surveygrid/models/table/modelSurveyGridTable.dart';
-import 'package:surveygrid/services/strategies/tables/strategyTable.dart';
 
-class SurveyGridTable extends StatefulWidget {
-  final ModelSurveyGridTable surveyGridTable;
-  final List<String> columnGroupIds;
-  final List<String> columnIds;
-  final List<String> rowGroupIds;
-  final List<String> rowIds;
+Widget SurveyGridTable() {
+  final double _width = 90;
+  final double _height = 30;
+  final double _headerWidth = 90;
+  final double _headerHeight = 30;
 
-  StrategyTable strategyTable = new StrategyTable('instrument-height-leveling');
-
-  SurveyGridTable(this.surveyGridTable, this.columnGroupIds, this.columnIds,
-      this.rowGroupIds, this.rowIds);
-
-  @override
-  _surveyGridTable createState() => _surveyGridTable();
+  return Column(
+    children: [
+      Row(
+        children: [
+          Container(
+              child: Container(
+            width: _headerWidth,
+            height: _headerHeight,
+            child: Text('blank'),
+          )),
+          Expanded(
+              child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    width: _width,
+                    height: _headerHeight,
+                    child: Text('sticky row'),
+                  ),
+                  Container(
+                    width: _width,
+                    height: _headerHeight,
+                    child: Text('sticky row'),
+                  ),
+                  Container(
+                    width: _width,
+                    height: _headerHeight,
+                    child: Text('sticky row'),
+                  ),
+                  Container(
+                    width: _width,
+                    height: _headerHeight,
+                    child: Text('sticky row'),
+                  ),
+                  Container(
+                    width: _width,
+                    height: _headerHeight,
+                    child: Text('sticky row'),
+                  ),
+                  Container(
+                    width: _width,
+                    height: _headerHeight,
+                    child: Text('sticky row'),
+                  ),
+                ],
+              ),
+            ),
+          )),
+        ],
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(children: [
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+                Container(
+                  width: _headerWidth,
+                  height: _height,
+                  child: Text('sticky column'),
+                ),
+              ]),
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      children: [
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                        Container(
+                          width: _width,
+                          height: _height,
+                          child: Text('contents'),
+                        ),
+                      ],
+                    )),
+              ),
+            ),
+          ],
+        ),
+      )
+    ],
+  );
 }
 
-class _surveyGridTable extends State<SurveyGridTable> {
-  final int rowNumbers = 0;
+class ScrollControllers {
+  final ScrollController _verticalTitleController;
+  final ScrollController _verticalBodyController;
 
-  Widget build(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.all(8),
-        child: Table(
-          border: TableBorder(
-            horizontalInside: BorderSide(color: Colors.lightBlueAccent),
-            verticalInside: BorderSide(color: Colors.pinkAccent),
-          ),
-          defaultColumnWidth: IntrinsicColumnWidth(),
-          children: [
-            ...SurveyGridTableColumnGroups(
-              widget.surveyGridTable.columnGroups,
-              widget.columnGroupIds,
-              widget.columnIds,
-            ),
-            ...SurveyGridTableRowGroups(
-                widget.surveyGridTable.rowGroups,
-                widget.columnGroupIds,
-                widget.columnIds,
-                widget.rowGroupIds,
-                widget.rowIds)
-          ],
-        ));
+  final ScrollController _horizontalBodyController;
+  final ScrollController _horizontalTitleController;
+
+  ScrollControllers({
+    ScrollController? verticalTitleController,
+    ScrollController? verticalBodyController,
+    ScrollController? horizontalBodyController,
+    ScrollController? horizontalTitleController,
+  })  : this._verticalTitleController =
+      verticalTitleController ?? ScrollController(),
+        this._verticalBodyController =
+            verticalBodyController ?? ScrollController(),
+        this._horizontalBodyController =
+            horizontalBodyController ?? ScrollController(),
+        this._horizontalTitleController =
+            horizontalTitleController ?? ScrollController();
+}
+
+/// SyncScrollController keeps scroll controllers in sync.
+class _SyncScrollController {
+  _SyncScrollController(List<ScrollController> controllers) {
+    controllers
+        .forEach((controller) => _registeredScrollControllers.add(controller));
+  }
+
+  final List<ScrollController> _registeredScrollControllers = [];
+
+  ScrollController? _scrollingController;
+  bool _scrollingActive = false;
+
+  /// Returns true if reached scroll end
+  bool processNotification(
+      ScrollNotification notification,
+      ScrollController controller,
+      ) {
+    if (notification is ScrollStartNotification && !_scrollingActive) {
+      _scrollingController = controller;
+      _scrollingActive = true;
+      return false;
+    }
+
+    if (identical(controller, _scrollingController) && _scrollingActive) {
+      if (notification is ScrollEndNotification) {
+        _scrollingController = null;
+        _scrollingActive = false;
+        return true;
+      }
+
+      if (notification is ScrollUpdateNotification) {
+        for (ScrollController controller in _registeredScrollControllers) {
+          if (identical(_scrollingController, controller)) continue;
+          controller.jumpTo(_scrollingController!.offset);
+        }
+      }
+    }
+    return false;
   }
 }
+

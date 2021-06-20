@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ScreenMainMenu extends StatelessWidget {
-  ScreenMainMenu({Key key}) : super(key: key);
+  ScreenMainMenu() : super();
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('main menu'),
+      child: Text('Main menu'),
     );
   }
 }
