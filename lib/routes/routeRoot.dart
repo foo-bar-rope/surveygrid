@@ -10,9 +10,6 @@ class RouteRoot extends StatefulWidget {
 }
 
 class _renderRouteRootState extends State<RouteRoot> {
-  String userId;
-  String accessToken;
-
   Widget build(BuildContext context) {
     return widget._body;
   }

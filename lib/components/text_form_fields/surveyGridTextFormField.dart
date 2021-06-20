@@ -1,27 +1,34 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:surveygrid/services/functions/validation/functionValidation.dart';
 
 class SurveyGridTextFormField extends StatelessWidget {
-  final bool enabled;
-  final bool required;
-  final String value;
-  final TextAlign textAlign;
-  final InputDecoration decoration;
-  final ValueChanged<String> onChanged;
-  final String validationType;
+  late bool enabled;
+  late String value;
+  late TextAlign textAlign;
+  late InputDecoration decoration;
+  late ValueChanged<String> onChanged;
+  late TextInputType textInputType;
+  late String validationType;
+  late bool required;
 
   SurveyGridTextFormField(
-      {this.enabled,
-      this.required,
-      this.value,
-      this.textAlign,
-      this.decoration,
-      this.onChanged,
-      this.validationType});
-
-  final GenerateValidatorOfTextFormField textFormFieldValidator =
-      new GenerateValidatorOfTextFormField();
+      {enabled: bool,
+      value: String,
+      textAlign: TextAlign,
+      decoration: InputDecoration,
+      onChanged: Function,
+      textInpuType: TextInputType,
+      validationType: String,
+      required: bool}) {
+    this.enabled = enabled;
+    this.value = value;
+    this.textAlign = textAlign;
+    this.decoration = decoration;
+    this.onChanged = onChanged;
+    this.textInputType = textInputType;
+    this.validationType = validationType;
+    this.required = required;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +38,7 @@ class SurveyGridTextFormField extends StatelessWidget {
       textAlign: this.textAlign,
       decoration: this.decoration,
       onChanged: this.onChanged,
-      validator: textFormFieldValidator(
-          this.value, this.validationType, this.required),
+      keyboardType: this.textInputType,
     );
   }
 }

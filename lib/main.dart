@@ -1,13 +1,11 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:surveygrid/routes/routeMainMenu.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await FirebaseApp.allApps();
+  // await FirebaseApp.allApps();
   runApp(SurveyGrid());
 }
 
@@ -15,7 +13,7 @@ class SurveyGrid extends StatelessWidget {
   static FirebaseAnalytics analytics = FirebaseAnalytics();
   static FirebaseAnalyticsObserver observer =
       FirebaseAnalyticsObserver(analytics: analytics);
-  static Firestore firestore = Firestore();
+  // static Firestore firestore = Firestore();
 
   // This widget is the root of your application.
   @override

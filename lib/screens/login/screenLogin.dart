@@ -3,31 +3,34 @@ import 'package:surveygrid/components/buttons/surveyGridIconTextButton.dart';
 import 'package:surveygrid/components/text_form_fields/surveyGridTextFormField.dart';
 
 class ScreenLogin extends StatefulWidget {
-  ScreenLogin({Key key}) : super(key: key);
+  ScreenLogin() : super();
 
   @override
   _renderLoginState createState() => _renderLoginState();
 }
 
 class _renderLoginState extends State<ScreenLogin> {
-  String email;
-  String password;
+  late String email;
+  late String password;
 
-  ValueChanged<String> onChangedEmail(String e) {
+  void onChangedEmail(String e) {
     setState(() {
       this.email = e;
     });
   }
 
-  ValueChanged<String> onChangedPassword(String e) {
+  void onChangedPassword(String e) {
     setState(() {
       this.password = e;
     });
   }
 
-  VoidCallback onPressed() {}
+  void onLogin() {}
 
-  _renderLoginState({this.email, this.password});
+  _renderLoginState({String email = '', String password = ''}) {
+    this.email = email;
+    this.password = password;
+  }
 
   Widget build(BuildContext context) {
     return Center(
@@ -40,6 +43,9 @@ class _renderLoginState extends State<ScreenLogin> {
             decoration:
                 InputDecoration(labelText: 'Email', icon: Icon(Icons.email)),
             onChanged: onChangedEmail,
+            textInpuType: TextInputType.text,
+            validationType: '',
+            required: true,
           ),
           SurveyGridTextFormField(
             enabled: true,
@@ -48,11 +54,14 @@ class _renderLoginState extends State<ScreenLogin> {
             decoration:
                 InputDecoration(labelText: 'Password', icon: Icon(Icons.lock)),
             onChanged: onChangedPassword,
+            textInpuType: TextInputType.text,
+            validationType: '',
+            required: true,
           ),
           SurveyGridIconTextButton(
-            icon: Icon(Icons.login),
-            label: Text('login'),
-            onPressed: onPressed,
+            iconData: Icons.login,
+            labelText: 'login',
+            onPressed: onLogin,
           )
         ],
       ),

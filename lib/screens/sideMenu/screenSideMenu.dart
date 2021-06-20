@@ -9,38 +9,30 @@ class ScreenSideMenu extends StatelessWidget {
     return ListView(
       children: <Widget>[
         DrawerHeader(
-            child: Text('Send Grid'),
-          decoration: BoxDecoration(
-            color: Colors.blue
-          ),
+          child: Text('Send Grid'),
+          decoration: BoxDecoration(color: Colors.blue),
         ),
         ListTile(
           title: Text('Login'),
           onTap: () {
             Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RouteLogin())
-            );
+                context, MaterialPageRoute(builder: (context) => RouteLogin()));
           },
         ),
         ListTile(
           title: Text('Menu'),
           onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RouteMainMenu())
-            );
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => RouteMainMenu()));
           },
         ),
         ListTile(
           title: Text('Table'),
           onTap: () {
             Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RouteTable())
-            );
+                context, MaterialPageRoute(builder: (context) => RouteTable()));
           },
-        )
+        ),
       ],
     );
   }

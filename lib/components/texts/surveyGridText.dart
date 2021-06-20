@@ -2,10 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SurveyGridText extends StatelessWidget {
-  final String value;
+  late String value;
 
-  SurveyGridText(
-      {this.value});
+  SurveyGridText({required String value}) {
+    this.value = value;
+  }
 
   @override
   Widget build(BuildContext context) {
